@@ -1,4 +1,4 @@
-# Sequelize-Auto
+# Sequelize-Auto (now compatible with Mysql 8 auth)
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/sequelize/sequelize-auto.svg)](https://greenkeeper.io/)
 
