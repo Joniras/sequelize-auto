@@ -1,5 +1,5 @@
 {
-  "name": "sequelize-auto",
+  "name": "@joniras/sequelize-auto",
   "version": "0.4.30",
   "description": "Automatically generate bare sequelize models from your database.",
   "main": "index",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sequelize/sequelize-auto.git"
+    "url": "git+https://github.com/sequelize/sequelize-auto.git"
   },
   "bugs": {
     "url": "https://github.com/sequelize/sequelize-auto/issues"
@@ -26,11 +26,11 @@
     ]
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --globals setImmediate,clearImmediate,__core-js_shared__ --ui tdd --check-leaks --colors -t 15000 --reporter spec \"test/**/*.test.js\"",
-    "test-postgres": "./node_modules/.bin/cross-env DIALECT=postgres npm run test",
-    "test-mysql": "./node_modules/.bin/cross-env DIALECT=mysql npm run test",
-    "test-sqlite": "./node_modules/.bin/cross-env DIALECT=sqlite npm run test",
-    "test-mssql": "./node_modules/.bin/cross-env DIALECT=mssql npm run test",
+    "test": "mocha --globals setImmediate,clearImmediate,__core-js_shared__ --ui tdd --check-leaks --colors -t 15000 --reporter spec \"test/**/*.test.js\"",
+    "test-postgres": "cross-env DIALECT=postgres npm run test",
+    "test-mysql": "cross-env DIALECT=mysql npm run test",
+    "test-sqlite": "cross-env DIALECT=sqlite npm run test",
+    "test-mssql": "cross-env DIALECT=mssql npm run test",
     "cover": "rm -rf coverage && COVERAGE=true ./node_modules/.bin/nyc -r lcov npm run test",
     "cover-mysql": "DIALECT=mysql npm run cover && mv coverage coverage-mysql",
     "cover-sqlite": "DIALECT=sqlite npm run cover && mv coverage coverage-sqlite",
@@ -70,5 +70,10 @@
     "pg-hstore": "^2.3.2",
     "sqlite3": "^4.0.0",
     "tedious": "^2.0.0"
+  },
+  "homepage": "https://github.com/sequelize/sequelize-auto#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
